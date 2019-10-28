@@ -1,0 +1,33 @@
+(princ "\nLaunching Ezlisp\n")
+(vl-load-com)
+(alloc 5460)
+(expand 10)
+
+(defun import (x)
+  (load x)
+  (princ)
+  )
+
+(defun test-package (x)
+  (princ "\n--------- Test Start: ")
+  (princ x)
+  (princ " ---------\n")
+  (load x)
+  (princ "\n--------- Test End: ")
+  (princ x)
+  (princ " ---------\n")
+  (princ)
+  )
+
+(defun install (x)
+  (startapp (strcat "ez.exe install " x))
+  (princ)
+ )
+
+(defun uninstall (x)
+  (startapp (strcat "ez.exe uninstall " x))
+  (princ)
+ )
+
+;; (import "packages/loaded")
+(princ "Ezlisp OK\n")
