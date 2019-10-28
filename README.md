@@ -12,12 +12,19 @@ Easier Autolisp using package management [Ezinstall](https://github.com/chenbota
 
 ## Package management
 
-1. `(install <author>/<repo>)`: Install autolisp package from github 
-2. `(uninstall <repo>)`: Uninstall autolisp package 
+### Install autolisp package from github 
+`(install <author>/<repo>)`
+
+### Uninstall autolisp package 
+`(uninstall <repo>)`
 
 ## Import package
 
+`(import "<file>")`
+
 `(import "<repo>/<file>")`
+
+`(import "<foo>")` -> `(import "<foo>/<foo>")`
 
 ## Preload packages
 
