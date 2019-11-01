@@ -28,5 +28,5 @@
   (princ)
  )
 
-;; (import "packages/loaded")
+(import "packages/loaded")
 (princ "Ezlisp OK\n")
