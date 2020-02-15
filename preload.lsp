@@ -28,5 +28,20 @@
   (princ)
  )
 
+(defun c:tt ()
+  (foreach i __testing_mods__
+           (altest i))
+  )
+
+(defun c:ll ()
+  (foreach i __testing_mods__
+           (import i))
+  )
+
+(defun c:ttt ()
+  (c:ll)
+  (c:tt)
+  )
+
 (import "packages/loaded")
 (princ "Ezlisp OK\n")
