@@ -1,7 +1,7 @@
 (princ "\nLaunching Ezlisp\n")
 (vl-load-com)
-(alloc 5460)
-(expand 10)
+;; (alloc 5460)
+;; (expand 10)
 
 (defun import (x / catchit)
   (setq catchit (vl-catch-all-apply 'load (list x)))
@@ -34,8 +34,8 @@
   )
 
 (defun c:ll ()
-  (foreach i __testing_mods__
-           (import i))
+  (foreach i __loaded_mods__ (import i))
+  (foreach i __testing_mods__ (import i))
   )
 
 (defun c:ttt ()
