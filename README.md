@@ -29,3 +29,32 @@ Easier Autolisp using package management [Ezinstall](https://github.com/chenbota
 ## Preload packages
 
 Add one line `(import "<repo>/<file>")` to packages/loaded
+Or, add packge_name to `__loaded_mods__`
+
+## Test packages
+
+Add packge_name to `__testing_mods__`
+
+## Commands (in CAD)
+
+- ll: reload all files in `__loaded_mods__` and `__testing_mods__`
+- tt: test all files in `__testing_mods__`
+- ttt: reload and test
+
+# Package Structure
+
+- package_name (folder)
+    - package_name.lsp
+        + (import "package_name/file1")
+        + (import "package_name/file2")
+        + ...
+    - file1.lsp
+    - file2.lsp
+    - ...
+    - test.lsp
+        + (import "package_name/tests/file1")
+        + (import "package_name/tests/file2")
+        + ...
+    - tests (folder)
+        + file1.lsp (test_file)
+        + file2.lsp (test_file)
